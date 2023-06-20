@@ -3,85 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Integrando HTML com JS</title>
-    <style>
-        body {
-        background: rgb(70  , 142, 236);
-        font: normal 15pt Arial;
-        }
-        header {
-        color: white;
-        text-align: center;
-        }
-        div {
-        background: white;
-        border-radius: 10px;
-        padding: 15px;
-        width: 500px;
-        margin: auto;
-        margin-top: 100px;
-        box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-        }
-        .success-message {
-        background-color: #27ae60;
-        padding: 16px;
-        color: #fff;
-        display: none;
-        }
-        .error-message {
-        background-color: #ae2727;
-        padding: 16px;
-        color: #fff;
-        display: none;
-        }
-    </style>
+    <title>Agenda de Contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <header>
-        <h1>Integrando HTML com JS</h1>
-    </header>
     <div class="container">
-        <form id="form">
-            <input type="number" required placeholder="Campo A" id="campoA">
-            <input type="number" required placeholder="Campo B" id="campoB">
-            <button id="valid" type="submit">Validação</button>
+        <header>
+            <h1>Agenda de Contatos</h1>
+        </header>
+        <form id="form-atividade">
+            <input type="text" id="nome" required placeholder="Nome">
+            <input type="tel" id="telefone" required placeholder="Telefone (+55)">
+            <button type="submit">Cadastrar</button>
         </form>
-        <p class="success-message">oi</p>
+        <table cellspacing="0">
+            <thead>
+                <tr>
+                    <th>
+                        Nome
+                    </th>
+                    <th>
+                        Telefone
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td id="nome-contato">
+                        ---
+                    </td>
+                    <td id="telefone-contato">
+                        ---
+                    </td>
+                </tr>
+            </tfoot>
+        </table>
     </div>
-    <script>
-        const form = document.getElementById('form')
-        const paragrafo = document.querySelector('.success-message')
-        const campoA = document.getElementById('campoA')
-        const campoB = document.getElementById('campoB')
-
-        form.addEventListener('submit', function validarFormulario(e) {
-            e.preventDefault()
-            const valorCampoA = Number(campoA.value)
-            const valorCampoB = Number(campoB.value)
-            const pos = `Positivo`
-            const neg = `Negativo`
-
-            if (valorCampoB > valorCampoA) {
-                paragrafo.classList.remove('error-message')
-                paragrafo.textContent = pos
-                paragrafo.style.display = 'block'
-            } else {
-                paragrafo.classList.add('error-message')
-                paragrafo.textContent = neg
-                paragrafo.style.display = 'block'
-            }
-
-            campoA.value = ''
-            campoB.value = ''
-        })
-
-        campoA.addEventListener('focus', function() {
-            paragrafo.style.display = 'none'
-        })
-
-        campoB.addEventListener('focus', function() {
-            paragrafo.style.display = 'none'
-        })
-    </script>
+    <script src="main.js"></script>
 </body>
 </html>
