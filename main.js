@@ -1,34 +1,13 @@
-const form = document.getElementById('form-atividade')
-let linhas = ''
-const nome = []
-const telefone = []
+$(document).ready(function() {
 
-form.addEventListener('submit', function(e) {
-    e.preventDefault()
-    adicionaLinha()
-    atualizaTabela()
+    $('form').on('submit', function(e) {
+        e.preventDefault()
+        const tarefaNova = $('#nome-tarefa').val()
+        const novoItem = $('<li>' + tarefaNova + '</li>')
+        $('ul').append(novoItem);
+        $('#nome-tarefa').val('');
+    })
+    $('ul').on('click', 'li', function() {
+        $(this).css('text-decoration', 'line-through')
+    })
 })
-
-function adicionaLinha() {
-    const inputNome = document.getElementById('nome')
-    const inputTelefone = document.getElementById('telefone')
-
-    if (telefone.includes(inputTelefone.value)) {
-        alert(`O telefone ${inputTelefone.value} já foi inserido`)
-    } else {
-        telefone.push(inputTelefone.value)
-        nome.push(inputNome.value)
-        let linha = '<tr>'
-        linha += `<td>${inputNome.value}</td>`
-        linha += `<td>${inputTelefone.value}</td>`
-        linha += `</tr>`
-        linhas += linha
-    }
-    inputNome.value = ''
-    inputTelefone.value = ''
-}
-
-function atualizaTabela() {
-    const corpoTabela = document.querySelector('tbody')
-    corpoTabela.innerHTML = linhas
-}
