@@ -3,31 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
-    <title>Bootstrap</title>
+    <link rel="stylesheet" href="lib/css_bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Bootstrap avançado</title>
 </head>
-<body class="bg-light">
-    <div class="row bg-dark text-center text-light">
-        <h2>Bootstrap</h2>
-    </div>
-    <div class="container text-dark">
-        
+<body>
+    <header><h1>Bootstrap avançado</h1></header>
+    <div class="container">
         <div class="row">
-            <div class="col-3"></div>
-            <div class="col-6">
-                <form>
-                    <label class="form-label" for="nome">Seu nome: </label>
-                    <input class="form-control" type="text" id="nome">
-                    <label class="form-label" for="email" >Seu e-mail: </label>
-                    <input class="form-control" type="email" id="email">
-                    <label class="form-label" for="tel" >Seu telefone: </label>
-                    <input class="form-control" type="tel" id="tel">
-                    <button style="margin-top:10px;" class="btn btn-success">Enviar</button>
-                </form>
+            <div class="col">
+                <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div data-bs-interval="1000" class="carousel-item active">
+                            <img class="d-block w-100" src="images/cao01.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h2>Foto de um Cão</h2>
+                            </div>
+                        </div>
+                        <div data-bs-interval="1000" class="carousel-item">
+                            <img class="d-block w-100" src="images/lince.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h2>Foto de uma Lince</h2>
+                            </div>
+                        </div>
+                        <div data-bs-interval="1000" class="carousel-item">
+                            <img class="d-block w-100" src="images/zebra01.jpg" alt="">
+                            <div class="carousel-caption">
+                                <h2>Foto de uma zebra</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
+                        <span class="carousel-control-prev-icon"></span>
+                    </button>
+                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
+                        <span class="carousel-control-next-icon"></span>
+                    </button>
+                    <div class="carousel-indicators">
+                        <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
+                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                    </div>
+                </div>
             </div>
-            <div class="col-3"></div>
+        </div>
+        <div class="row justify-content-center align-items-center mt-1">
+            <div class="coluna col-lg-4 col-md-5 col-sm-12">
+                <article class="card text-bg-dark">
+                    <header class="card-header">Cão</header>
+                    <img src="images/cão.png" alt="Imagem de um cão">
+                    <div class="card-body">
+                        <h4 class="card-title">Canis lupus familiaris</h4>
+                        <h5 class="card-subtitle">Outros nomes: Cachorro, Dog, Caramelo.</h5>
+                        <p class="card-text">O cão (nome científico: Canis lupus familiaris), no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano</p>
+                    </div>
+
+                </article>
+            </div>
+            <div class="coluna col-lg-4 col-md-5 col-sm-12">
+                <article class="card text-bg-dark">
+                    <header class="card-header">Lince</header>
+                    <img src="images/Lince-euroasiático.jpg" alt="Imagem de uma lince">
+                    <div class="card-body">
+                        <h4 class="card-title">Lynx lynx</h4>
+                        <h5 class="card-subtitle">Outros nomes: Lince-euroasiático, Lince-europeu, Gatinho.</h5>
+                        <p class="card-text">O lince-euroasiático é um felino de tamanho médio, nativo nas florestas da Europa e da Sibéria, onde é um dos predadores cujas principais caças variam de uma lebre a um veado adulto.</p>
+                    </div>
+
+                </article>
+            </div>
+            <div class="coluna col-lg-4 col-md-5 col-sm-12">
+                <article class="card text-bg-dark">
+                    <header class="card-header">Zebra</header>
+                    <img src="images/zebra.jpg" alt="Imagem de uma zebra">
+                    <div class="card-body">
+                        <h4 class="card-title">Equus zebra</h4>
+                        <h5 class="card-subtitle">Outros nomes: Zebra das planícies, Zebra das montanhas, Marty.</h5>
+                        <p class="card-text">As zebras são mamíferos que pertencem à família dos cavalos. A pelagem deste animal consiste num conjunto de listras contrastantes de cor, com o seu corpo todo branco e algumas listras pretas.</p>
+                    </div>
+
+                </article>
+            </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/js_bootstrap.bundle.min.js"></script>
 </body>
 </html>
