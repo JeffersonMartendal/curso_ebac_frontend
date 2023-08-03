@@ -3,90 +3,345 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="lib/css_bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="main.css">
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
-    <title>Bootstrap avançado</title>
+    <title>Instrumentos EBAC</title>
 </head>
 <body>
-    <header><h1>Bootstrap avançado</h1></header>
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div id="carousel-exemplo" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div data-bs-interval="3000" class="carousel-item active">
-                            <img class="d-block w-100" src="images/cao01.jpg" alt="">
-                            <div class="carousel-caption">
-                                <h2>Foto de um Cão</h2>
-                            </div>
-                        </div>
-                        <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="images/lince.jpg" alt="">
-                            <div class="carousel-caption">
-                                <h2>Foto de uma Lince</h2>
-                            </div>
-                        </div>
-                        <div data-bs-interval="3000" class="carousel-item">
-                            <img class="d-block w-100" src="images/zebra01.jpg" alt="">
-                            <div class="carousel-caption">
-                                <h2>Foto de uma zebra</h2>
-                            </div>
-                        </div>
+    <header class="navbar navbar-expand-lg sticky-top p-4" id="cabecalho">
+        <div class="container">
+            <h1 class="navbar-brand m-0 section-title fs-3">Instrumentos musicais.</h1>
+            <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#menu-navegacao">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <nav class="navbar-collapse collapse justify-content-end mt-2" id="menu-navegacao">
+                <ul class="nav nav-pills d-block d-md-flex">
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#sobre-a-loja">
+                            <i class="bi bi-boombox-fill me-1"></i>
+                            Sobre a loja
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#eventos">
+                            <i class="bi bi-file-music me-1"></i>
+                            Eventos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#instrumentos">
+                            <i class="bi bi-music-note-beamed me-1"></i>
+                            Instrumentos
+                        </a>
+                    </li>
+                    <li class="nav-item fw-bold">
+                        <a class="nav-link" href="#fale-conosco">
+                            <i class="bi bi-music-note-list me-1"></i>
+                            Fale Conosco
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div data-bs-spy="scroll" data-bs-target="#cabecalho" data-bs-smooth-scroll="true">
+        <section id="sobre-a-loja">
+            <div class="carousel carousel-fade slide" data-bs-ride="carousel" id="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="3000">
+                        <img src="./images/Slides/guitarras-cordas01.png" alt="Imagem de guitarras coloridas">
                     </div>
-                    <button data-bs-target="#carousel-exemplo" data-bs-slide="prev" class="carousel-control-prev" type="button">
-                        <span class="carousel-control-prev-icon"></span>
-                    </button>
-                    <button data-bs-target="#carousel-exemplo" data-bs-slide="next" class="carousel-control-next" type="button">
-                        <span class="carousel-control-next-icon"></span>
-                    </button>
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carousel-exemplo" class="active" data-bs-slide-to="0"></button>
-                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="1"></button>
-                        <button type="button" data-bs-target="#carousel-exemplo" data-bs-slide-to="2"></button>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./images/Slides/piano01.png" alt="Imagem de um piano">
+                    </div>
+                    <div class="carousel-item" data-bs-interval="3000">
+                        <img src="./images/Slides/saxofone01.png" alt="Imagem de um saxofone">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon"></span>
+                </button>
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="0" class="active"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="1"></button>
+                    <button type="button" data-bs-target="#carousel" data-bs-slide-to="2"></button>
+                </div>
+            </div>
+            <div class="pt-5 pb-5">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-5">
+                            <img src="images/loja-musica.jpg" class="d-block w-100 rounded" alt="Foto da loja de instrumentos musicais">
+                        </div>
+                        <div class="col-md-7 mt-3 mt-md-0">
+                            <h2 class="section-title">Sobre <span class="text-colored">a loja</span></h2>
+                            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illo ipsa deserunt, voluptas voluptatem ex, explicabo eligendi error, laboriosam expedita praesentium odio aspernatur? Repudiandae perspiciatis dignissimos animi placeat, quidem magnam ad!</p>
+                            <h3 class="section-title">Sobre <span class="text-colored">o espaço</span></h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolor, reiciendis necessitatibus maiores nulla et qui accusamus obcaecati deleniti quaerat aspernatur ullam. Delectus tempora nostrum saepe, nihil provident esse iste dolores.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-        <div class="row justify-content-center align-items-center mt-1">
-            <div class="coluna col-lg-4 col-md-5 col-sm-12">
-                <article class="card text-bg-dark">
-                    <header class="card-header">Cão</header>
-                    <img src="images/cão.png" alt="Imagem de um cão">
-                    <div class="card-body">
-                        <h4 class="card-title">Canis lupus familiaris</h4>
-                        <h5 class="card-subtitle">Outros nomes: Cachorro, Dog, Caramelo.</h5>
-                        <p class="card-text">O cão (nome científico: Canis lupus familiaris), no Brasil também chamado de cachorro, é um mamífero carnívoro da família dos canídeos, subespécie do lobo, e talvez o mais antigo animal domesticado pelo ser humano</p>
+        </section>
+        <section id="eventos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 id="eventos-titulo" class="section-title text-center">Para todas as ocasiões</h2>
+                </div>
+                <div class="row mt-4">
+                    <div class="col-md-4">
+                        <img src="images/Eventos/show-aniversario.jpg" alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title fs-4">
+                            <i class="bi bi-calendar-heart-fill">Show para Aniversários</i>
+                        </h3>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non eaque harum repellendus perferendis dolores suscipit nemo eius optio ipsam cumque impedit, placeat molestiae iusto ab officiis? Amet quo cumque ea.</p>
                     </div>
-
-                </article>
-            </div>
-            <div class="coluna col-lg-4 col-md-5 col-sm-12">
-                <article class="card text-bg-dark">
-                    <header class="card-header">Lince</header>
-                    <img src="images/Lince-euroasiático.jpg" alt="Imagem de uma lince">
-                    <div class="card-body">
-                        <h4 class="card-title">Lynx lynx</h4>
-                        <h5 class="card-subtitle">Outros nomes: Lince-euroasiático, Lince-europeu, Gatinho.</h5>
-                        <p class="card-text">O lince-euroasiático é um felino de tamanho médio, nativo nas florestas da Europa e da Sibéria, onde é um dos predadores cujas principais caças variam de uma lebre a um veado adulto.</p>
+                    <div class="col-md-4">
+                        <img src="images/Eventos/show-casamento.jpg" alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title fs-4">
+                            <i class="bi bi-arrow-through-heart-fill">Show para casamentos</i>
+                        </h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut quod velit neque laudantium id, non accusamus maiores ipsam voluptate aliquid asperiores temporibus accusantium nihil. Quasi excepturi quidem sit vero nihil.</p>
                     </div>
-
-                </article>
-            </div>
-            <div class="coluna col-lg-4 col-md-5 col-sm-12">
-                <article class="card text-bg-dark">
-                    <header class="card-header">Zebra</header>
-                    <img src="images/zebra.jpg" alt="Imagem de uma zebra">
-                    <div class="card-body">
-                        <h4 class="card-title">Equus zebra</h4>
-                        <h5 class="card-subtitle">Outros nomes: Zebra das planícies, Zebra das montanhas, Marty.</h5>
-                        <p class="card-text">As zebras são mamíferos que pertencem à família dos cavalos. A pelagem deste animal consiste num conjunto de listras contrastantes de cor, com o seu corpo todo branco e algumas listras pretas.</p>
+                    <div class="col-md-4">
+                        <img src="images/Eventos/show-bares.jpg" alt="" class="d-block w-100 rounded mb-2">
+                        <h3 class="section-title fs-4">
+                            <i class="bi bi-people-fill">Show para bares</i>
+                        </h3>
+                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus at qui repudiandae beatae dicta, exercitationem minima quasi et doloribus cumque delectus deserunt sint, nemo repellat! Odit vero consequuntur eaque similique.</p>
                     </div>
-
-                </article>
+                </div>
             </div>
-        </div>
+        </section>
+        <section id="instrumentos" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 id="instrumentos-titulo" class="section-title text-center mb-5">Nossos <span class="text-colored">Instrumentos</span></h2>
+                </div>
+                <div class="row">
+                    <aside class="col-md-2">
+                        <nav class="nav nav-pills flex-column nav-instrumentos">
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#corda" class="fw-bold text-start nav-link text-colored active">Instrumentos de corda</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#percussao" class="fw-bold text-start nav-link text-colored">Instrumentos de Percussão</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#sopro" class="fw-bold text-start nav-link text-colored">Instrumentos de Sopro</button>
+                            <button type="button" data-bs-toggle="tab" data-bs-target="#idiofones" class="fw-bold text-start nav-link text-colored mb-2">Idiofones</button>
+                        </nav>
+                    </aside>
+                    <div class="col-md-10">
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="corda">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="./images/Corda/violão.jpg" alt="Violão" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Violão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="./images/Corda/cavaquinho.jpg" alt="Cavaquinho" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Cavaquinho</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="./images/Corda/violão.jpg" alt="Violão" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Violão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="./images/Corda/cavaquinho.jpg" alt="Cavaquinho" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Cavaquinho</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="./images/Corda/violão.jpg" alt="Violão" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Violão</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="./images/Corda/cavaquinho.jpg" alt="Cavaquinho" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Cavaquinho</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="percussao">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="images/Percussão/bombo.jpg" alt="Bombo" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Bombo</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Percussão/Pandereta.jpg" alt="Pandereta" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Pandereta</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Percussão/tambor_de_metal_infantil.jpg" alt="Tambor Infantil" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Tambor Infantil</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Percussão/bombo.jpg" alt="Bombo" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Bombo</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Percussão/Pandereta.jpg" alt="Pandereta" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Pandereta</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Percussão/tambor_de_metal_infantil.jpg" alt="Tambor Infantil" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Tambor Infantil</h5>
+                                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="sopro">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="images/Sopro/clarinete.jpg" alt="Clarinete" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Clarinete</h5>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Sopro/flauta_transversal.jpg" alt="Flauta Transversal" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Flauta Transversal</h5>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Sopro/trompeta.jpg" alt="Trompeta" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Trompeta</h5>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Sopro/clarinete.jpg" alt="Clarinete" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Clarinete</h5>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Sopro/flauta_transversal.jpg" alt="Flauta Transversal" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Flauta Transversal</h5>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Sopro/trompeta.jpg" alt="Trompeta" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Trompeta</h5>
+                                        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="idiofones">
+                                <div class="row">
+                                    <div class="col-md-3">
+                                        <img src="images/Idiofones/Castanholas.jpg" alt="Castanholas" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Castanholas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Idiofones/Xilófono-com-suporte.jpg" alt="Xilófono com suporte" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Xilófono com suporte</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Idiofones/Castanholas.jpg" alt="Castanholas" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Castanholas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Idiofones/Xilófono-com-suporte.jpg" alt="Xilófono com suporte" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Xilófono com suporte</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                    <div class="col-md-3">
+                                        <img src="images/Idiofones/Castanholas.jpg" alt="Castanholas" class="d-block w-100">
+                                        <h5 class="text-colored fw-bold mt-2">Castanholas</h5>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="fale-conosco" class="pt-5 pb-5">
+            <div class="container">
+                <div class="row">
+                    <h2 class="section-title text-center">Fale conosco</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-7 mb-5">
+                        <form>
+                            <div class="mb-3">
+                                <label for="nome" class="form-label fw-bold">Seu nome</label>
+                                <input type="text" id="nome" name="nome" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label fw-bold">Seu e-mail</label>
+                                <input type="email" id="email" name="email" class="form-control" required>
+                            </div>
+                            <div class="mb-3">
+                                <label for="telefone" class="form-label fw-bold">Seu telefone (opicional)</label>
+                                <input type="tel" id="telefone" name="telefone" class="form-control">
+                            </div>
+                            <div class="mb-3">
+                                <label for="mensagem" class="form-label fw-bold">Sua mensagem</label>
+                                <textarea class="form-control" id="mensagem" name="mensagem" required></textarea>
+                            </div>
+                            <button type="submit" class="btn fw-bold">Enviar</button>
+                        </form>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="row">
+                            <h3 class="section-title fs-4">
+                                <i class="bi bi-hand-thumbs-up-fill"></i>
+                            Redes Sociais</h3>
+                            <ul class="social-links">
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5 ms-1 me-1">
+                                    <a href="#">
+                                        <i class="bi bi-instagram"></i>
+                                    </a>
+                                </li>
+                                <li class="fs-5">
+                                    <a href="#">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="row mt-4">
+                            <h3 class="section-title fs-4">
+                                <i class="bi bi-cursor-fill"></i>
+                                Endereço
+                            </h3>
+                            <p>
+                                Rua Texte Exemplo nº 145, Bairro Bootstrap - São Paulo - SP
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
-    <script src="lib/js_bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="../js/jquery.mask.min.js"></script>
+    <script src="../js/jquery.validate.min.js"></script>
+    <script src="../js/messages_pt_BR.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

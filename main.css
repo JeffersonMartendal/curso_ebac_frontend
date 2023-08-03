@@ -1,34 +1,87 @@
-
 body {
-    background-color: #cccccc88;
+    font-family: 'Roboto', sans-serif;
 }
 
-h1 {
-    background-color: rgba(0, 0, 0, 0.678);
-    padding: 10px;
-    color: white;
-    margin-bottom: 0;
-    text-align: center;
+.navbar {
+    background-color: rgb(92, 92, 92);
 }
 
-.container {
-    background-color: white;
-    border-top: none;
-    padding: 0;
-    border-radius: 0 0 0 0;
-    margin-bottom: 20px;
+#cabecalho .nav .nav-link.active {
+    background-color: #fff;
+    color: #383838;
 }
 
-.coluna {
-    text-align: center;
-    margin-top: 10px;
-    
+#cabecalho .nav .nav-link,
+.navbar-brand,
+.navbar-brand:hover,
+.nav-instrumentos .nav-link.active:hover {
+    color: #fff;
 }
 
-@media screen and (min-width: 641px) and (max-width: 1023px) {
-    
+#sobre-a-loja {
+    background-color: rgb(133, 133, 133);
 }
 
-@media screen and (max-width: 640px) {
+#eventos {
+    background-color: #ffda9b8e;
+}
 
+#instrumentos {
+    background-color: rgb(133, 99, 74);
+}
+
+#fale-conosco {
+    background-color: rgba(124, 107, 75, 0.588)
+}
+
+.navbar-toggler {
+    background-color: lightgray;
+}
+
+.section-title {
+    font-family: 'Pacifico', cursive;
+}
+
+.text-colored {
+    color: #ece8e8;
+}
+
+.nav-instrumentos .nav-link.active,
+#fale-conosco button {
+    background-color: #d49043d7;
+    color: #fff;
+}
+
+.nav-instrumentos .nav-link:hover {
+    color: #383838;
+}
+
+.social-links li {
+    list-style: none;
+    display: inline;
+}
+
+.social-links a {
+    text-decoration: none;
+    color: black;
+}
+
+i {
+    pointer-events: none;
+}
+
+.tab-pane {
+    padding-left: 15px;
+}
+
+@media (max-width: 767px) {
+    .carousel-item img {
+        max-width: 100%;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+    .carousel-item img {
+        max-width: 100%;
+    }
 }
